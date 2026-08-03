@@ -59,19 +59,27 @@ gh secret set GH_PAT --repo gameplan-apps/statuspage   # prompts; value is not e
 **4. Enable GitHub Pages.** Done — source is the `gh-pages` branch, which
 `Static Site CI` creates and updates.
 
-**4a. Point DNS at it.** `.upptimerc.yml` sets `cname: status.apprabbit.com`,
-so GitHub redirects the default `gameplan-apps.github.io/statuspage` URL to
-that hostname. Until the record exists, the page is unreachable. Add:
+**4a. Where the page is served — pick exactly one.** The generated site links
+its assets from the server root, so it needs to know its own base. Set one of
+these under `status-website:`, never both:
+
+| Setting | URL | Notes |
+|---|---|---|
+| `baseUrl: /statuspage` | `gameplan-apps.github.io/statuspage/` | **Current.** No DNS needed. |
+| `cname: status.apprabbit.com` | `status.apprabbit.com` | Needs a DNS record, below |
+
+With **neither** set, every stylesheet and script 404s and the page renders as
+unstyled HTML — that is the failure mode to recognise if it ever looks broken.
+
+To move to the custom domain later: swap the two lines, push, wait for
+`Static Site CI`, set the domain under Settings → Pages, and add:
 
 ```
 status.apprabbit.com   CNAME   gameplan-apps.github.io
 ```
 
-On Cloudflare this must be **DNS-only (grey cloud)**, at least until GitHub has
-issued the certificate — proxied records break Pages' cert provisioning.
-
-To skip the custom domain instead, delete the `cname:` line, push, and the page
-serves at `https://gameplan-apps.github.io/statuspage/`.
+On Cloudflare that record must be **DNS-only (grey cloud)** until GitHub has
+issued the certificate — a proxied record breaks cert provisioning.
 
 **5. Kick the first run.**
 
