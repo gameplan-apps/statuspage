@@ -6,31 +6,71 @@ runners, so the page survives an outage of anything we operate.
 > Upptime rewrites `README.md` with the generated status summary. Keep human
 > documentation in this file — anything put in the README will be overwritten.
 
+## Division of labour
+
+**Upptime does the measuring. We do the rendering.** Upstream probes endpoints,
+opens and closes issues, and commits results. Its own generated site is
+disabled — `site/` replaces it.
+
+That split is why the theme file (`assets/apprabbit.css`) and Upptime's
+`themeUrl` are no longer used. They stay in the repo only for the case where we
+ever fall back to the upstream site.
+
 ## What is here
 
 | Path | What it is |
 |---|---|
-| `.upptimerc.yml` | Probe list + site config. **Edit this to add/remove checks.** |
-| `.github/workflows/maintenance-mirror.yml` | Ours — mirrors declared maintenance notices onto the page |
-| `scripts/mirror-maintenance.sh` | The mirror logic (fail-soft; no-ops until the status document exists) |
-| `scripts/fetch-upptime-workflows.sh` | Pulls Upptime's canonical workflows from upstream |
-| `assets/apprabbit.css` | Theme, ported from the studio dashboard palette |
+| `.upptimerc.yml` | Probe list. **Edit this to add/remove checks.** |
+| `site/index.html`, `site/history/` | The two pages |
+| `site/status.css`, `site/app.js` | Shared styles and renderer |
+| `site/data.json` | Built in CI — everything the pages render. Never hand-edit |
+| `scripts/build-status-data.mjs` | Builds `data.json` |
+| `scripts/mirror-maintenance.sh` | Pulls KV notices → issues + `maintenance/*.json` |
+| `scripts/fetch-upptime-workflows.sh` | Re-syncs upstream workflows |
+| `data/daily/<slug>.json` | The 90-day strip, one entry per run |
+| `maintenance/<id>.json` | Notice snapshots, so history outlives KV |
+| `.github/workflows/status-site.yml` | Builds data, commits it, deploys `site/` |
+
+## How the page gets its data
+
+```
+Uptime CI  →  history/*.yml + api/*/*.json   (upstream)
+                        ↓
+              Status site workflow
+                        ↓
+  build-status-data.mjs  ──→  site/data.json  ──→  gh-pages
+     ↑            ↑                ↑
+  issues     KV notices     data/daily/*.json
+```
+
+A page load is **one fetch of one file**. No GitHub API calls, no pagination —
+which matters most in exactly the situation the page exists for.
+
+### The 90-day strip accumulates
+
+Upptime commits history only on a status *change*, so per-day state can't be
+read cheaply from its files. Instead each run appends today's verdict to
+`data/daily/<slug>.json`, worst-state-wins within a day. Days before that file
+existed render as grey "no data" — never as green, which would be a lie.
+
+**Consequence:** the strip fills in over 90 days. It cannot be backfilled.
+
+### Uptime is the 7-day figure
+
+Not all-time. All-time carries every misconfigured probe we ever ran — a wrong
+health path once had a perfectly healthy gateway at 20% — which reports our
+setup errors as the service's reliability.
 
 ## Theming
 
-`assets/` is published as-is, so `apprabbit.css` lands next to the site and
-`status-website.themeUrl` points at it. Two layers inside:
+Colours come from
+`studio/packages/application/dashboard/src/theme/dashboard-theme.css`, with
+traffic-light status colours on top. Every state has **two** tokens: `--up` etc.
+is the vivid FILL for bars and dots, `--up-ink` is the deeper shade for text —
+the signal colours are far too light to read on near-white. Dark mode carries
+lifted versions of the same hues and sets ink equal to fill.
 
-1. The variables Upptime reads (its documented contract — the full list is in
-   [status-page/static/themes/dark.css](https://github.com/upptime/status-page/blob/HEAD/static/themes/dark.css)).
-2. Polish on the page's own markup: `article` is a service card,
-   `article.up|.degraded|.down` carries state, `.tag` is the status pill.
-
-**Only ever target those semantic names.** The `svelte-xxxxxx` classes in the
-built HTML are content hashes and change on every build — styling them would
-silently break. Colors come from
-`studio/packages/application/dashboard/src/theme/dashboard-theme.css`; keep them
-in step if the dashboard palette moves.
+Edit `site/status.css`. Changes deploy on the next `Status site` run.
 
 ## One-time setup
 
