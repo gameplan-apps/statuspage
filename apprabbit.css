@@ -1,0 +1,309 @@
+/*
+ * AppRabbit status page theme.
+ *
+ * Ported from the studio dashboard's palette
+ * (studio/packages/application/dashboard/src/theme/dashboard-theme.css): warm
+ * stone neutrals rather than cool greys, brand blue #2B6FF2 as the single
+ * interactive accent, generous corners, soft layered shadows.
+ *
+ * Two layers here:
+ *   1. The variables Upptime's status page actually reads (its documented
+ *      contract — see status-page/static/themes/dark.css).
+ *   2. Structural polish on the page's own markup: `article` is a service card,
+ *      `article.up|.degraded|.down` carries state, `.tag` is the status pill.
+ *      Those are plain semantic names in global.css, NOT the hashed
+ *      `svelte-xxxxx` classes — hashes change every build, these do not.
+ *
+ * Fonts load from Google Fonts. If that fails the stack falls back to system
+ * faces; nothing about availability reporting depends on it.
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  /* ── studio dashboard tokens (light) ───────────────────────────── */
+  --ar-stone-0: #ffffff;
+  --ar-stone-50: #faf8f4;
+  --ar-stone-100: #f4f1ea;
+  --ar-stone-200: #ebe6dc;
+  --ar-stone-500: #78716c;
+  --ar-stone-600: #57534e;
+  --ar-stone-900: #181513;
+
+  --ar-brand-300: #8aa9ff;
+  --ar-brand-400: #5c87ff;
+  --ar-brand-500: #2b6ff2;
+  --ar-brand-600: #1f58d1;
+
+  --ar-success: #0f9d6b;
+  --ar-warning: #a15206;
+  --ar-danger: #dc2646;
+
+  --ar-bg: var(--ar-stone-50);
+  --ar-panel: var(--ar-stone-0);
+  --ar-subtle: var(--ar-stone-100);
+  --ar-text: var(--ar-stone-900);
+  --ar-text-dim: var(--ar-stone-600);
+  --ar-line: rgba(24, 21, 19, 0.08);
+  --ar-line-strong: rgba(24, 21, 19, 0.14);
+  --ar-accent: var(--ar-brand-500);
+  --ar-accent-fg: #ffffff;
+
+  --ar-shadow-sm: 0 2px 6px rgba(24, 21, 19, 0.05), 0 1px 2px rgba(24, 21, 19, 0.03);
+  --ar-shadow-md: 0 6px 18px rgba(24, 21, 19, 0.06), 0 2px 4px rgba(24, 21, 19, 0.03);
+  --ar-shadow-lg: 0 16px 40px rgba(24, 21, 19, 0.09), 0 4px 10px rgba(24, 21, 19, 0.03);
+
+  --ar-radius-md: 14px;
+  --ar-radius-lg: 20px;
+  --ar-radius-full: 9999px;
+  --ar-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --ar-font-body: "Instrument Sans", system-ui, -apple-system, "Helvetica Neue", sans-serif;
+  --ar-font-serif: "Instrument Serif", Georgia, serif;
+
+  /* ── the variables Upptime reads ───────────────────────────────── */
+  --body-background-color: var(--ar-bg);
+  --body-text-color: var(--ar-text);
+  --card-background-color: var(--ar-panel);
+  --card-border-color: var(--ar-line);
+  --nav-background-color: rgba(250, 248, 244, 0.82);
+  --nav-border-bottom-color: var(--ar-line);
+  --nav-current-border-bottom-color: var(--ar-accent);
+
+  --up-border-left-color: var(--ar-success);
+  --degraded-border-left-color: var(--ar-warning);
+  --down-border-left-color: var(--ar-danger);
+  --down-background-color: #fbdada;
+
+  --tag-color: #ffffff;
+  --tag-up-background-color: var(--ar-success);
+  --tag-degraded-background-color: var(--ar-warning);
+  --tag-down-background-color: var(--ar-danger);
+  --change-background-color: var(--ar-warning);
+
+  --submit-button-background-color: var(--ar-accent);
+  --submit-button-border-color: var(--ar-brand-600);
+  --submit-button-color: var(--ar-accent-fg);
+  --error-button-background-color: var(--ar-danger);
+  --error-button-border-color: #b91c36;
+  --error-button-color: #ffffff;
+
+  --graph-opacity: 0.9;
+  --graph-filter: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dashboard's dark block — warm near-black, not a naive inversion. */
+    --ar-bg: #161311;
+    --ar-panel: #1e1a17;
+    --ar-subtle: #26221e;
+    --ar-text: #f5f0e6;
+    --ar-text-dim: #a89f8e;
+    --ar-line: rgba(255, 250, 240, 0.08);
+    --ar-line-strong: rgba(255, 250, 240, 0.16);
+    --ar-accent: var(--ar-brand-400);
+    --ar-accent-fg: #0e0c0a;
+
+    /* Status hues lifted for contrast on dark; the light values are tuned as
+       ink on paper and read as muddy slabs here. */
+    --ar-success: #34d399;
+    --ar-warning: #f0b429;
+    --ar-danger: #ff7a8a;
+
+    --ar-shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.4);
+    --ar-shadow-md: 0 8px 22px rgba(0, 0, 0, 0.45);
+    --ar-shadow-lg: 0 18px 46px rgba(0, 0, 0, 0.5);
+
+    --nav-background-color: rgba(22, 19, 17, 0.82);
+    --down-background-color: rgba(255, 122, 138, 0.14);
+    --tag-color: #0e0c0a;
+    --submit-button-color: #0e0c0a;
+    --graph-opacity: 0.85;
+    --graph-filter: brightness(1.35) saturate(0.9);
+  }
+}
+
+/* ── page ─────────────────────────────────────────────────────────── */
+
+body {
+  font-family: var(--ar-font-body);
+  background:
+    radial-gradient(60% 55% at 18% 0%, rgba(43, 111, 242, 0.09), transparent 70%),
+    radial-gradient(48% 50% at 88% 96%, rgba(235, 130, 80, 0.07), transparent 70%),
+    var(--ar-bg);
+  background-attachment: fixed;
+  color: var(--ar-text);
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: -0.006em;
+}
+
+.container {
+  max-width: 60rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+h1 {
+  font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
+
+/* The dashboard uses Instrument Serif italic for editorial accents; the intro
+   line is the one place on this page that earns it. */
+p.lead {
+  font-family: var(--ar-font-serif);
+  font-style: italic;
+  font-size: 1.16rem;
+  line-height: 1.55;
+  color: var(--ar-text-dim);
+  max-width: 46rem;
+}
+
+h2,
+h3,
+h4 {
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+a {
+  color: var(--ar-accent);
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--ar-brand-600);
+}
+
+/* ── nav ──────────────────────────────────────────────────────────── */
+
+nav {
+  backdrop-filter: saturate(1.6) blur(14px);
+  -webkit-backdrop-filter: saturate(1.6) blur(14px);
+  border-bottom: 1px solid var(--ar-line);
+}
+
+nav .logo img {
+  border-radius: var(--ar-radius-md);
+}
+
+nav a {
+  border-radius: var(--ar-radius-full);
+  padding: 0.35rem 0.75rem;
+  transition: background var(--ar-ease) 160ms;
+}
+
+nav a:hover {
+  background: rgba(43, 111, 242, 0.1);
+}
+
+/* ── service cards ────────────────────────────────────────────────── */
+
+article {
+  border-radius: var(--ar-radius-lg);
+  border: 1px solid var(--ar-line);
+  border-left-width: 4px;
+  box-shadow: var(--ar-shadow-sm);
+  transition:
+    transform 200ms var(--ar-ease),
+    box-shadow 200ms var(--ar-ease),
+    border-color 200ms var(--ar-ease);
+}
+
+article:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--ar-shadow-md);
+  border-color: var(--ar-line-strong);
+}
+
+article.down {
+  box-shadow: var(--ar-shadow-md);
+}
+
+/* Response-time sparklines sit flush in the card; round the corner they share. */
+article .graph img {
+  border-radius: var(--ar-radius-md);
+}
+
+/* ── status pills ─────────────────────────────────────────────────── */
+
+.tag {
+  border-radius: var(--ar-radius-full);
+  font-weight: 600;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.62rem;
+}
+
+/* ── the big live-status readout ──────────────────────────────────── */
+
+.live-status {
+  border-radius: var(--ar-radius-lg);
+  background: var(--ar-panel);
+  border: 1px solid var(--ar-line);
+  box-shadow: var(--ar-shadow-lg);
+}
+
+.live-status .data {
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── definition lists (uptime / response time figures) ────────────── */
+
+dl {
+  font-variant-numeric: tabular-nums;
+}
+
+dl dt {
+  color: var(--ar-text-dim);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+dl dd {
+  font-weight: 600;
+}
+
+/* ── buttons ──────────────────────────────────────────────────────── */
+
+.submit-button,
+a.error-button {
+  border-radius: var(--ar-radius-full);
+  font-weight: 600;
+  box-shadow: var(--ar-shadow-sm);
+  transition:
+    transform 160ms var(--ar-ease),
+    box-shadow 160ms var(--ar-ease);
+}
+
+.submit-button:hover,
+a.error-button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--ar-shadow-md);
+}
+
+:focus-visible {
+  outline: 2px solid var(--ar-accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  article,
+  .submit-button,
+  a.error-button,
+  nav a {
+    transition: none;
+  }
+
+  article:hover,
+  .submit-button:hover,
+  a.error-button:hover {
+    transform: none;
+  }
+}
