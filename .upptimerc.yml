@@ -60,10 +60,24 @@ sites:
     maxResponseTime: 4000
 
 status-website:
-  cname: status.apprabbit.com # TODO create the CNAME → apprabbit.github.io, or delete this line to use the default Pages URL
+  # The generated site links assets from the SERVER ROOT, so it only renders
+  # correctly at a root. Two mutually exclusive ways to give it one:
+  #
+  #   baseUrl: /statuspage      served at gameplan-apps.github.io/statuspage
+  #   cname: status.apprabbit.com   served at the apex of our own domain
+  #
+  # Set exactly one. With neither, every stylesheet 404s and the page renders
+  # as unstyled HTML. To move to the custom domain later: comment out baseUrl,
+  # uncomment cname, add the CNAME record (see SETUP.md), and clear the custom
+  # domain in Settings → Pages.
+  baseUrl: /statuspage
+  # cname: status.apprabbit.com
+
   name: AppRabbit Status
+  logoUrl: https://studio.apprabbit.app/apprabbit-logo.svg
+  favicon: https://apprabbit.com/favicon.ico
   introTitle: AppRabbit system status
-  introMessage: Live availability for the AppRabbit platform. Checks run every 5 minutes from GitHub's infrastructure, independent of our own — so this page keeps working during an outage. Scheduled maintenance is posted here before it starts.
+  introMessage: Live availability for the AppRabbit platform. Checks run every 5 minutes from GitHub's infrastructure, independent of our own — so this page keeps reporting during an outage. Scheduled maintenance is posted here before it starts.
   navbar:
     - title: Status
       href: /
