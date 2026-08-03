@@ -56,9 +56,22 @@ a probe. Add a PAT when that lag annoys you.
 gh secret set GH_PAT --repo gameplan-apps/statuspage   # prompts; value is not echoed
 ```
 
-**4. Enable GitHub Pages.** Settings → Pages → source `gh-pages` branch. The
-`site` workflow creates that branch on its first successful run, so do this
-after step 5.
+**4. Enable GitHub Pages.** Done — source is the `gh-pages` branch, which
+`Static Site CI` creates and updates.
+
+**4a. Point DNS at it.** `.upptimerc.yml` sets `cname: status.apprabbit.com`,
+so GitHub redirects the default `gameplan-apps.github.io/statuspage` URL to
+that hostname. Until the record exists, the page is unreachable. Add:
+
+```
+status.apprabbit.com   CNAME   gameplan-apps.github.io
+```
+
+On Cloudflare this must be **DNS-only (grey cloud)**, at least until GitHub has
+issued the certificate — proxied records break Pages' cert provisioning.
+
+To skip the custom domain instead, delete the `cname:` line, push, and the page
+serves at `https://gameplan-apps.github.io/statuspage/`.
 
 **5. Kick the first run.**
 
@@ -98,6 +111,15 @@ The mirror titles each incident from `copy.override.en.title`, falling back to
 "Scheduled maintenance". It deliberately never prints `copy.titlePath` — a lex
 key on a public page leaks an internal identifier. Any notice worth mirroring
 should carry human copy.
+
+## Disabled workflows
+
+`Setup CI` and `Update Template CI` are **disabled**. They try to rewrite this
+repo's own `.github/workflows/` on a schedule, which `github.token` is not
+permitted to do — every run failed. Re-syncing with upstream is deliberate here
+instead: run `scripts/fetch-upptime-workflows.sh` and commit the diff, so a
+workflow change is something you reviewed rather than something that landed
+overnight.
 
 ## Known limits
 
