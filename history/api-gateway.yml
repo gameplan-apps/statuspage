@@ -1,7 +1,7 @@
-url: https://gateway.svcrabbit.com/livez
-status: down
-code: 404
-responseTime: 315
-lastUpdated: 2026-08-03T16:18:15.111Z
+url: https://gateway.svcrabbit.com/healthz
+status: up
+code: 200
+responseTime: 162
+lastUpdated: 2026-08-03T16:23:36.453Z
 startTime: 2026-08-03T16:18:02.308Z
 generator: Upptime <https://github.com/upptime/upptime>
