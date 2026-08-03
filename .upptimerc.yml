@@ -73,6 +73,10 @@ status-website:
   baseUrl: /statuspage
   # cname: status.apprabbit.com
 
+  # Custom theme ported from the studio dashboard palette. Files in assets/ are
+  # published as-is, so this resolves against the same baseUrl as the site.
+  themeUrl: https://gameplan-apps.github.io/statuspage/apprabbit.css
+
   name: AppRabbit Status
   logoUrl: https://studio.apprabbit.app/apprabbit-logo.svg
   favicon: https://apprabbit.com/favicon.ico
