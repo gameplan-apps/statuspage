@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Incident history — AppRabbit Status</title>
+  <meta name="description" content="Every AppRabbit outage and maintenance window, with the updates posted during each.">
+  <meta name="theme-color" content="#faf8f4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161311" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="https://apprabbit.com/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Instrument+Serif:ital@0;1&display=swap">
+  <link rel="stylesheet" href="../status.css">
+</head>
+<body data-page="history" data-base="..">
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="wordmark" href=".." style="text-decoration:none;color:inherit">
+      <img src="https://studio.apprabbit.app/apprabbit-logo.svg" alt="" width="26" height="26" style="border-radius:8px">
+      AppRabbit Status
+    </a>
+    <nav class="links">
+      <a href="..">Status</a>
+      <a href="." aria-current="page">Incident history</a>
+      <a href="https://apprabbit.com">apprabbit.com</a>
+    </nav>
+  </div>
+</header>
+
+<div class="shell">
+  <main>
+    <section class="hero" style="padding-bottom:18px">
+      <h1>Incident history</h1>
+      <p class="sub">Every outage and maintenance window we've recorded, newest first.</p>
+      <div class="stamp" id="history-stamp"></div>
+    </section>
+
+    <div class="sec">
+      <div class="filters" role="group" aria-label="Filter">
+        <button class="chip" data-filter="all" aria-pressed="true">All</button>
+        <button class="chip" data-filter="incident" aria-pressed="false">Incidents</button>
+        <button class="chip" data-filter="maintenance" aria-pressed="false">Maintenance</button>
+      </div>
+      <span class="hint">outages detected automatically · maintenance announced by us</span>
+    </div>
+
+    <div id="history-list"></div>
+  </main>
+
+  <footer>
+    <span id="footer-stamp">—</span>
+    <span><a href="../data.json">Status JSON</a> · checks by <a href="https://upptime.js.org">Upptime</a></span>
+  </footer>
+</div>
+
+<script src="../app.js"></script>
+</body>
+</html>

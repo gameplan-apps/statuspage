@@ -68,6 +68,29 @@ body_for() {
 
 mapfile -t WANT_IDS < <(jq -r '.notices[].id' "$DOC")
 
+# Snapshot every notice into the repo. The KV document holds only what is
+# CURRENT — clearing a notice deletes it — so without this the history page
+# loses each maintenance window the moment it ends.
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+mkdir -p "$REPO_ROOT/maintenance"
+for id in "${WANT_IDS[@]}"; do
+  jq --arg id "$id" '
+    .notices[] | select(.id == $id)
+    | {
+        id,
+        title: (.copy.override.en.title // "Scheduled maintenance"),
+        body:  (.copy.override.en.body  // ""),
+        mode,
+        services: (.scope.services // ["*"]),
+        apps:     (.scope.apps     // ["*"]),
+        surfaces: (.scope.surfaces // ["*"]),
+        startsAt: (.window.startsAt // null),
+        endsAt:   (.window.endsAt   // null)
+      }
+  ' "$DOC" > "$REPO_ROOT/maintenance/$id.json"
+done
+echo "Snapshotted ${#WANT_IDS[@]} notice(s) to maintenance/."
+
 # ── what is already open here ─────────────────────────────────────────
 declare -A HAVE_NUMBER
 while IFS=$'\t' read -r number id; do
