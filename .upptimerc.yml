@@ -1,0 +1,83 @@
+# AppRabbit status — Upptime configuration
+#
+# Probes run on GitHub's runners, off our infrastructure entirely. That is the
+# whole point: a total Cloudflare or Fly outage still leaves a working status
+# page, because nothing here depends on us.
+#
+# NOTE: this repo is PUBLIC (required for free unlimited Actions minutes at a
+# 5-minute cron). Every URL below is therefore public. Probe only endpoints
+# that are safe to disclose and safe to hit anonymously — no auth'd routes,
+# no tenant PII, no admin surfaces.
+
+owner: gameplan-apps
+repo: statuspage
+
+sites:
+  # ── Origin services ────────────────────────────────────────────────
+  - name: API gateway
+    url: https://gateway.svcrabbit.com/livez
+    maxResponseTime: 2000
+
+  # /readyz always answers 200 and reports degradation in the BODY, so a
+  # plain status-code check would call a half-dead API healthy. Match the
+  # body instead — this is the check that actually earns its keep.
+  - name: Monolith API
+    url: https://monolith.svcrabbit.com/readyz
+    __dangerous__body_degraded: '"status":"degraded"'
+    __dangerous__body_down_if_text_missing: '"status"'
+    maxResponseTime: 3000
+
+  # TODO verify the path. alfred is an MCP server behind OAuth — point this at
+  # whatever it exposes unauthenticated. Do NOT probe a tool-call endpoint.
+  # - name: Alfred (MCP)
+  #   url: https://alfred.svcrabbit.com/healthz
+  #   maxResponseTime: 3000
+
+  # TODO axis has no hostname in the repo yet. Add it once deployed; a plain
+  # HTTP GET on the ws host is enough to prove the process is answering.
+  # - name: Axis (realtime)
+  #   url: https://axis.svcrabbit.com/healthz
+
+  # ── Edge / delivery ────────────────────────────────────────────────
+  # The worker runs on `*/*` across the zone, so this one probe covers the
+  # path every tenant hostname takes. If this is down, every tenant is down.
+  - name: Studio dashboard
+    url: https://studio.apprabbit.app/
+    maxResponseTime: 2500
+
+  # TODO point at a real tenant slug so the probe exercises app lookup +
+  # branding KV end to end, not just static asset serving. Pick a tenant we
+  # own, never a customer's production app.
+  # - name: Tenant app delivery
+  #   url: https://<our-demo-slug>.apprabbit.app/
+
+  - name: Marketing site
+    url: https://apprabbit.com
+    maxResponseTime: 4000
+
+status-website:
+  cname: status.apprabbit.com # TODO create the CNAME → apprabbit.github.io, or delete this line to use the default Pages URL
+  name: AppRabbit Status
+  introTitle: AppRabbit system status
+  introMessage: Live availability for the AppRabbit platform. Checks run every 5 minutes from GitHub's infrastructure, independent of our own — so this page keeps working during an outage. Scheduled maintenance is posted here before it starts.
+  navbar:
+    - title: Status
+      href: /
+    - title: Incident history
+      href: /history
+    - title: apprabbit.com
+      href: https://apprabbit.com
+
+# Upptime opens an issue when a check fails and closes it on recovery, which
+# is where incident history comes from. Assign so it reaches a human.
+assignees:
+  - elijah-apprabbit
+
+# Skip the "degraded" → issue path for slow-but-up; only real failures page.
+# (Comment this out if you want response-time regressions tracked as incidents.)
+skipDescriptionUpdate: false
+
+commitMessages:
+  readmeContent: "📝 Update status summary"
+  summaryJson: "📝 Update summary.json"
+  statusChange: "$PREFIX $SITE_NAME is $STATUS ($RESPONSE_CODE in $RESPONSE_TIME ms)"

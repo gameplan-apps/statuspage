@@ -1,0 +1,36 @@
+# Mirrors DECLARED maintenance notices from the edge status document onto this
+# page as incidents. One-way: the KV document is the source of truth.
+name: Maintenance mirror
+
+on:
+  schedule:
+    # Every 10 minutes. Actions cron is best-effort and often runs late; the
+    # repository_dispatch trigger below is what makes a publish show up fast.
+    - cron: "*/10 * * * *"
+  # Fired by the maintenance CLI / admin console right after it writes KV:
+  #   gh api repos/<owner>/status/dispatches -f event_type=maintenance
+  repository_dispatch:
+    types: [maintenance]
+  workflow_dispatch:
+
+# Serialise — two overlapping runs would race on issue creation.
+concurrency:
+  group: maintenance-mirror
+  cancel-in-progress: false
+
+permissions:
+  issues: write
+  contents: read
+
+jobs:
+  mirror:
+    name: Mirror declared notices
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Mirror maintenance notices
+        run: bash scripts/mirror-maintenance.sh
+        env:
+          STATUS_DOC_URL: ${{ vars.STATUS_DOC_URL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
