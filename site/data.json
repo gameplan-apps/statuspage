@@ -1,17 +1,390 @@
 {
-  "generatedAt": "2026-08-03T17:23:30.565Z",
+  "generatedAt": "2026-08-03T17:26:05.108Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
-    "servicesMonitored": 3,
+    "servicesMonitored": 4,
     "uptime7": "100.00%",
-    "medianMs": 168,
+    "medianMs": 274,
     "incidents30d": 0,
     "mttrMin": null,
-    "lastCheck": "2026-08-03T16:53:53.202Z"
+    "lastCheck": "2026-08-03T17:25:34.228Z"
   },
   "services": [
+    {
+      "slug": "api-gateway",
+      "name": "API gateway",
+      "url": "https://gateway.svcrabbit.com/healthz",
+      "host": "gateway.svcrabbit.com/healthz",
+      "state": "up",
+      "lastCheck": "2026-08-03T17:25:34.228Z",
+      "uptime": "—",
+      "responseMs": 379,
+      "responseLabel": "—",
+      "daily": [
+        {
+          "d": "2026-05-06",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-07",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-08",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-09",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-10",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-11",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-12",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-13",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-14",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-15",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-16",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-17",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-18",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-19",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-20",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-21",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-22",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-23",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-24",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-25",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-26",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-27",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-28",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-29",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-30",
+          "state": "none"
+        },
+        {
+          "d": "2026-05-31",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-01",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-02",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-03",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-04",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-05",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-06",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-07",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-08",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-09",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-10",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-11",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-12",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-13",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-14",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-15",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-16",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-17",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-18",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-19",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-20",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-21",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-22",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-23",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-24",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-25",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-26",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-27",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-28",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-29",
+          "state": "none"
+        },
+        {
+          "d": "2026-06-30",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-01",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-02",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-03",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-04",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-05",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-06",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-07",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-08",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-09",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-10",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-11",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-12",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-13",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-14",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-15",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-16",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-17",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-18",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-19",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-20",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-21",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-22",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-23",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-24",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-25",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-26",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-27",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-28",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-29",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-30",
+          "state": "none"
+        },
+        {
+          "d": "2026-07-31",
+          "state": "none"
+        },
+        {
+          "d": "2026-08-01",
+          "state": "none"
+        },
+        {
+          "d": "2026-08-02",
+          "state": "none"
+        },
+        {
+          "d": "2026-08-03",
+          "state": "up"
+        }
+      ]
+    },
     {
       "slug": "monolith-api",
       "name": "Monolith API",
