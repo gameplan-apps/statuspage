@@ -83,10 +83,12 @@ status-website:
   introTitle: AppRabbit system status
   introMessage: Live availability for the AppRabbit platform. Checks run every 5 minutes from GitHub's infrastructure, independent of our own — so this page keeps reporting during an outage. Scheduled maintenance is posted here before it starts.
   navbar:
+    # Navbar hrefs are emitted literally, so they must carry the baseUrl —
+    # a bare /history resolves to the domain root and 404s.
     - title: Status
-      href: /
+      href: /statuspage/
     - title: Incident history
-      href: /history
+      href: /statuspage/history
     - title: apprabbit.com
       href: https://apprabbit.com
 
