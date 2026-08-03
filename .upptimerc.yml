@@ -14,9 +14,11 @@ repo: statuspage
 
 sites:
   # ── Origin services ────────────────────────────────────────────────
+  # /livez is the monolith's path — the gateway 404s on it. Body is plain "ok".
   - name: API gateway
-    url: https://gateway.svcrabbit.com/livez
-    maxResponseTime: 2000
+    url: https://gateway.svcrabbit.com/healthz
+    __dangerous__body_down_if_text_missing: "ok"
+    maxResponseTime: 5000
 
   # /readyz always answers 200 and reports degradation in the BODY, so a
   # plain status-code check would call a half-dead API healthy. Match the
@@ -25,7 +27,9 @@ sites:
     url: https://monolith.svcrabbit.com/readyz
     __dangerous__body_degraded: '"status":"degraded"'
     __dangerous__body_down_if_text_missing: '"status"'
-    maxResponseTime: 3000
+    # 5s, not 3s: a cold machine's first request pays start-up + TLS and tripped
+    # the degraded threshold on the very first run.
+    maxResponseTime: 5000
 
   # TODO verify the path. alfred is an MCP server behind OAuth — point this at
   # whatever it exposes unauthenticated. Do NOT probe a tool-call endpoint.
