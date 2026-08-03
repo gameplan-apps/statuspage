@@ -25,7 +25,8 @@ echo "Fetching the Upptime template…"
 curl -fsSL "$TEMPLATE_TARBALL" -o "$TMP/upptime.tar.gz"
 tar -xzf "$TMP/upptime.tar.gz" -C "$TMP"
 
-SRC="$(find "$TMP" -maxdepth 2 -type d -path '*/.github/workflows' | head -1)"
+# Tarball unpacks into upptime-upptime-<sha>/, so workflows sit three levels down.
+SRC="$(find "$TMP" -maxdepth 4 -type d -path '*/.github/workflows' | head -1)"
 if [ -z "$SRC" ]; then
   echo "Could not find .github/workflows in the template tarball. Aborting." >&2
   exit 1

@@ -40,10 +40,13 @@ bash scripts/fetch-upptime-workflows.sh
 git add -A && git commit -m "[CHORE] add Upptime workflows"
 ```
 
-**3. Create the `GH_PAT` secret.**
+**3. Create the `GH_PAT` secret.** *(optional — see below)*
 
-Upptime commits probe results back to the repo, which `GITHUB_TOKEN` cannot do
-in a way that re-triggers workflows — it needs a PAT.
+The current Upptime workflows fall back to `github.token` (`${{ secrets.GH_PAT
+|| github.token }}`), so the page works without a PAT. The gap: commits made
+with `github.token` do not trigger further workflows, so the chained
+summary/graph updates only land on their own cron rather than immediately after
+a probe. Add a PAT when that lag annoys you.
 
 - Create a fine-grained token scoped to **only this repo**, with
   `Contents: read+write`, `Issues: read+write`, `Workflows: read+write`.
