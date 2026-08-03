@@ -14,6 +14,23 @@ runners, so the page survives an outage of anything we operate.
 | `.github/workflows/maintenance-mirror.yml` | Ours — mirrors declared maintenance notices onto the page |
 | `scripts/mirror-maintenance.sh` | The mirror logic (fail-soft; no-ops until the status document exists) |
 | `scripts/fetch-upptime-workflows.sh` | Pulls Upptime's canonical workflows from upstream |
+| `assets/apprabbit.css` | Theme, ported from the studio dashboard palette |
+
+## Theming
+
+`assets/` is published as-is, so `apprabbit.css` lands next to the site and
+`status-website.themeUrl` points at it. Two layers inside:
+
+1. The variables Upptime reads (its documented contract — the full list is in
+   [status-page/static/themes/dark.css](https://github.com/upptime/status-page/blob/HEAD/static/themes/dark.css)).
+2. Polish on the page's own markup: `article` is a service card,
+   `article.up|.degraded|.down` carries state, `.tag` is the status pill.
+
+**Only ever target those semantic names.** The `svelte-xxxxxx` classes in the
+built HTML are content hashes and change on every build — styling them would
+silently break. Colors come from
+`studio/packages/application/dashboard/src/theme/dashboard-theme.css`; keep them
+in step if the dashboard palette moves.
 
 ## One-time setup
 
