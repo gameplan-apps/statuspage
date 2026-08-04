@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-04T00:18:01.239Z",
+  "generatedAt": "2026-08-04T00:55:34.652Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -19,9 +19,9 @@
       "host": "gateway.svcrabbit.com/healthz",
       "state": "up",
       "lastCheck": "2026-08-03T23:26:33.175Z",
-      "uptime": "—",
+      "uptime": "100%",
       "responseMs": 251,
-      "responseLabel": "—",
+      "responseLabel": "255 ms",
       "daily": [
         {
           "d": "2026-05-07",
@@ -394,7 +394,7 @@
       "lastCheck": "2026-08-03T23:26:33.373Z",
       "uptime": "100%",
       "responseMs": 159,
-      "responseLabel": "114 ms",
+      "responseLabel": "166 ms",
       "daily": [
         {
           "d": "2026-05-07",
@@ -767,7 +767,7 @@
       "lastCheck": "2026-08-03T23:26:33.532Z",
       "uptime": "100%",
       "responseMs": 128,
-      "responseLabel": "171 ms",
+      "responseLabel": "161 ms",
       "daily": [
         {
           "d": "2026-05-07",
@@ -1140,7 +1140,7 @@
       "lastCheck": "2026-08-03T23:26:33.747Z",
       "uptime": "100%",
       "responseMs": 183,
-      "responseLabel": "297 ms",
+      "responseLabel": "385 ms",
       "daily": [
         {
           "d": "2026-05-07",
