@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-07T01:28:43.129Z",
+  "generatedAt": "2026-08-07T01:52:48.610Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "down",
-    "headline": "1 service down",
+    "overall": "up",
+    "headline": "All systems operational",
     "servicesMonitored": 4,
     "uptime7": "99.97%",
-    "medianMs": 121,
+    "medianMs": 370,
     "incidents30d": 1,
-    "mttrMin": null,
-    "lastCheck": "2026-08-07T00:59:49.788Z"
+    "mttrMin": 53,
+    "lastCheck": "2026-08-07T01:52:23.139Z"
   },
   "services": [
     {
@@ -763,10 +763,10 @@
       "name": "Studio dashboard",
       "url": "https://studio.apprabbit.app/",
       "host": "studio.apprabbit.app",
-      "state": "down",
-      "lastCheck": "2026-08-07T00:59:49.788Z",
+      "state": "up",
+      "lastCheck": "2026-08-07T01:52:23.139Z",
       "uptime": "99.9%",
-      "responseMs": 75,
+      "responseMs": 599,
       "responseLabel": "191 ms",
       "daily": [
         {
@@ -1511,10 +1511,10 @@
       "title": "Studio dashboard is down",
       "body": "Studio dashboard failed its health check from GitHub's probes.",
       "kind": "down",
-      "resolved": false,
+      "resolved": true,
       "startedAt": "2026-08-07T00:59:50Z",
-      "endedAt": null,
-      "durationMin": null,
+      "endedAt": "2026-08-07T01:52:24Z",
+      "durationMin": 53,
       "url": "https://github.com/gameplan-apps/statuspage/issues/2",
       "services": [
         "Studio dashboard"
