@@ -60,17 +60,19 @@
     "url": "https://apprabbit.com",
     "icon": "https://icons.duckduckgo.com/ip3/apprabbit.com.ico",
     "slug": "marketing-site",
-    "status": "degraded",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 1060,
-    "timeDay": 3226,
-    "timeWeek": 1060,
-    "timeMonth": 1060,
-    "timeYear": 1060,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.58%",
+    "uptimeDay": "98.34%",
+    "uptimeWeek": "99.58%",
+    "uptimeMonth": "99.58%",
+    "uptimeYear": "99.58%",
+    "time": 963,
+    "timeDay": 2214,
+    "timeWeek": 963,
+    "timeMonth": 963,
+    "timeYear": 963,
+    "dailyMinutesDown": {
+      "2026-08-07": 24
+    }
   }
 ]
