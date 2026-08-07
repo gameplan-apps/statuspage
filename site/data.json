@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-06T23:38:06.563Z",
+  "generatedAt": "2026-08-07T01:00:18.016Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "up",
-    "headline": "All systems operational",
+    "overall": "down",
+    "headline": "1 service down",
     "servicesMonitored": 4,
     "uptime7": "100.00%",
-    "medianMs": 145,
-    "incidents30d": 0,
+    "medianMs": 121,
+    "incidents30d": 1,
     "mttrMin": null,
-    "lastCheck": "2026-08-05T23:24:48.182Z"
+    "lastCheck": "2026-08-07T00:59:49.788Z"
   },
   "services": [
     {
@@ -18,15 +18,11 @@
       "url": "https://gateway.svcrabbit.com/healthz",
       "host": "gateway.svcrabbit.com/healthz",
       "state": "up",
-      "lastCheck": "2026-08-05T23:24:47.441Z",
+      "lastCheck": "2026-08-07T00:48:36.954Z",
       "uptime": "100%",
-      "responseMs": 118,
+      "responseMs": 141,
       "responseLabel": "245 ms",
       "daily": [
-        {
-          "d": "2026-05-09",
-          "state": "none"
-        },
         {
           "d": "2026-05-10",
           "state": "none"
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-08-06",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-07",
           "state": "up"
         }
       ]
@@ -391,15 +391,11 @@
       "url": "https://monolith.svcrabbit.com/readyz",
       "host": "monolith.svcrabbit.com/readyz",
       "state": "up",
-      "lastCheck": "2026-08-05T23:24:47.582Z",
+      "lastCheck": "2026-08-07T00:48:39.325Z",
       "uptime": "100%",
-      "responseMs": 104,
+      "responseMs": 101,
       "responseLabel": "173 ms",
       "daily": [
-        {
-          "d": "2026-05-09",
-          "state": "none"
-        },
         {
           "d": "2026-05-10",
           "state": "none"
@@ -754,6 +750,10 @@
         },
         {
           "d": "2026-08-06",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-07",
           "state": "up"
         }
       ]
@@ -763,16 +763,12 @@
       "name": "Studio dashboard",
       "url": "https://studio.apprabbit.app/",
       "host": "studio.apprabbit.app",
-      "state": "up",
-      "lastCheck": "2026-08-05T23:24:47.792Z",
+      "state": "down",
+      "lastCheck": "2026-08-07T00:59:49.788Z",
       "uptime": "100%",
-      "responseMs": 171,
+      "responseMs": 75,
       "responseLabel": "159 ms",
       "daily": [
-        {
-          "d": "2026-05-09",
-          "state": "none"
-        },
         {
           "d": "2026-05-10",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-08-06",
           "state": "up"
+        },
+        {
+          "d": "2026-08-07",
+          "state": "down"
         }
       ]
     },
@@ -1137,15 +1137,11 @@
       "url": "https://apprabbit.com",
       "host": "apprabbit.com",
       "state": "up",
-      "lastCheck": "2026-08-05T23:24:48.182Z",
+      "lastCheck": "2026-08-07T00:48:41.191Z",
       "uptime": "100%",
-      "responseMs": 178,
+      "responseMs": 1315,
       "responseLabel": "337 ms",
       "daily": [
-        {
-          "d": "2026-05-09",
-          "state": "none"
-        },
         {
           "d": "2026-05-10",
           "state": "none"
@@ -1501,10 +1497,29 @@
         {
           "d": "2026-08-06",
           "state": "up"
+        },
+        {
+          "d": "2026-08-07",
+          "state": "up"
         }
       ]
     }
   ],
-  "incidents": [],
+  "incidents": [
+    {
+      "number": 2,
+      "title": "Studio dashboard is down",
+      "body": "Studio dashboard failed its health check from GitHub's probes.",
+      "kind": "down",
+      "resolved": false,
+      "startedAt": "2026-08-07T00:59:50Z",
+      "endedAt": null,
+      "durationMin": null,
+      "url": "https://github.com/gameplan-apps/statuspage/issues/2",
+      "services": [
+        "Studio dashboard"
+      ]
+    }
+  ],
   "maintenance": []
 }
