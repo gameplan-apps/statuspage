@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-07T14:46:29.449Z",
+  "generatedAt": "2026-08-07T15:12:13.194Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "up",
-    "headline": "All systems operational",
+    "overall": "degraded",
+    "headline": "1 service degraded",
     "servicesMonitored": 4,
     "uptime7": "99.97%",
     "medianMs": 370,
-    "incidents30d": 1,
+    "incidents30d": 2,
     "mttrMin": 53,
-    "lastCheck": "2026-08-07T01:52:23.139Z"
+    "lastCheck": "2026-08-07T15:11:47.929Z"
   },
   "services": [
     {
@@ -1136,10 +1136,10 @@
       "name": "Marketing site",
       "url": "https://apprabbit.com",
       "host": "apprabbit.com",
-      "state": "up",
-      "lastCheck": "2026-08-07T00:48:41.191Z",
+      "state": "degraded",
+      "lastCheck": "2026-08-07T15:11:47.929Z",
       "uptime": "100%",
-      "responseMs": 1315,
+      "responseMs": 5137,
       "responseLabel": "477 ms",
       "daily": [
         {
@@ -1500,12 +1500,24 @@
         },
         {
           "d": "2026-08-07",
-          "state": "up"
+          "state": "degraded"
         }
       ]
     }
   ],
   "incidents": [
+    {
+      "number": 3,
+      "title": "Marketing site has degraded performance",
+      "body": "The service responded more slowly than its configured threshold.",
+      "kind": "degraded",
+      "resolved": false,
+      "startedAt": "2026-08-07T15:11:48Z",
+      "endedAt": null,
+      "durationMin": null,
+      "url": "https://github.com/gameplan-apps/statuspage/issues/3",
+      "services": []
+    },
     {
       "number": 2,
       "title": "Studio dashboard is down",
