@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T23:57:44.113Z",
+  "generatedAt": "2026-08-09T00:31:07.864Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "99.97%",
+    "uptime7": "99.75%",
     "medianMs": 172,
     "incidents30d": 2,
     "mttrMin": 39,
@@ -21,12 +21,8 @@
       "lastCheck": "2026-08-08T23:10:15.227Z",
       "uptime": "100%",
       "responseMs": 62,
-      "responseLabel": "233 ms",
+      "responseLabel": "210 ms",
       "daily": [
-        {
-          "d": "2026-05-11",
-          "state": "none"
-        },
         {
           "d": "2026-05-12",
           "state": "none"
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-08-08",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-09",
           "state": "up"
         }
       ]
@@ -394,12 +394,8 @@
       "lastCheck": "2026-08-08T23:10:15.744Z",
       "uptime": "100%",
       "responseMs": 480,
-      "responseLabel": "163 ms",
+      "responseLabel": "209 ms",
       "daily": [
-        {
-          "d": "2026-05-11",
-          "state": "none"
-        },
         {
           "d": "2026-05-12",
           "state": "none"
@@ -755,6 +751,10 @@
         {
           "d": "2026-08-08",
           "state": "up"
+        },
+        {
+          "d": "2026-08-09",
+          "state": "up"
         }
       ]
     },
@@ -765,14 +765,10 @@
       "host": "studio.apprabbit.app",
       "state": "up",
       "lastCheck": "2026-08-08T23:10:15.928Z",
-      "uptime": "99.9%",
+      "uptime": "99.31%",
       "responseMs": 153,
-      "responseLabel": "191 ms",
+      "responseLabel": "222 ms",
       "daily": [
-        {
-          "d": "2026-05-11",
-          "state": "none"
-        },
         {
           "d": "2026-05-12",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-08-08",
           "state": "up"
+        },
+        {
+          "d": "2026-08-09",
+          "state": "up"
         }
       ]
     },
@@ -1138,14 +1138,10 @@
       "host": "apprabbit.com",
       "state": "up",
       "lastCheck": "2026-08-08T23:10:16.155Z",
-      "uptime": "100%",
+      "uptime": "99.69%",
       "responseMs": 190,
-      "responseLabel": "477 ms",
+      "responseLabel": "831 ms",
       "daily": [
-        {
-          "d": "2026-05-11",
-          "state": "none"
-        },
         {
           "d": "2026-05-12",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-08-08",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-09",
           "state": "up"
         }
       ]
