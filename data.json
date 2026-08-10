@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-10T00:05:23.868Z",
+  "generatedAt": "2026-08-10T00:34:24.860Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "99.75%",
+    "uptime7": "99.79%",
     "medianMs": 273,
     "incidents30d": 2,
     "mttrMin": 39,
@@ -394,7 +394,7 @@
       "lastCheck": "2026-08-09T23:11:07.668Z",
       "uptime": "100%",
       "responseMs": 555,
-      "responseLabel": "209 ms",
+      "responseLabel": "244 ms",
       "daily": [
         {
           "d": "2026-05-13",
@@ -765,9 +765,9 @@
       "host": "studio.apprabbit.app",
       "state": "up",
       "lastCheck": "2026-08-09T23:11:07.929Z",
-      "uptime": "99.31%",
+      "uptime": "99.42%",
       "responseMs": 237,
-      "responseLabel": "222 ms",
+      "responseLabel": "224 ms",
       "daily": [
         {
           "d": "2026-05-13",
@@ -1138,9 +1138,9 @@
       "host": "apprabbit.com",
       "state": "up",
       "lastCheck": "2026-08-09T23:11:08.268Z",
-      "uptime": "99.69%",
+      "uptime": "99.74%",
       "responseMs": 309,
-      "responseLabel": "831 ms",
+      "responseLabel": "788 ms",
       "daily": [
         {
           "d": "2026-05-13",
