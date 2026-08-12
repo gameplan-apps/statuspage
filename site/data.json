@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-11T23:47:50.239Z",
+  "generatedAt": "2026-08-12T00:07:24.737Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -24,10 +24,6 @@
       "responseLabel": "198 ms",
       "daily": [
         {
-          "d": "2026-05-14",
-          "state": "none"
-        },
-        {
           "d": "2026-05-15",
           "state": "none"
         },
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-08-11",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-12",
           "state": "up"
         }
       ]
@@ -397,10 +397,6 @@
       "responseLabel": "258 ms",
       "daily": [
         {
-          "d": "2026-05-14",
-          "state": "none"
-        },
-        {
           "d": "2026-05-15",
           "state": "none"
         },
@@ -755,6 +751,10 @@
         {
           "d": "2026-08-11",
           "state": "up"
+        },
+        {
+          "d": "2026-08-12",
+          "state": "up"
         }
       ]
     },
@@ -769,10 +769,6 @@
       "responseMs": 109,
       "responseLabel": "225 ms",
       "daily": [
-        {
-          "d": "2026-05-14",
-          "state": "none"
-        },
         {
           "d": "2026-05-15",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-08-11",
           "state": "up"
+        },
+        {
+          "d": "2026-08-12",
+          "state": "up"
         }
       ]
     },
@@ -1142,10 +1142,6 @@
       "responseMs": 102,
       "responseLabel": "742 ms",
       "daily": [
-        {
-          "d": "2026-05-14",
-          "state": "none"
-        },
         {
           "d": "2026-05-15",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-08-11",
+          "state": "up"
+        },
+        {
+          "d": "2026-08-12",
           "state": "up"
         }
       ]
