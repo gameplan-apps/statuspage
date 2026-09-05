@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T23:54:04.221Z",
+  "generatedAt": "2026-09-05T00:24:08.365Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -24,10 +24,6 @@
       "responseLabel": "178 ms",
       "daily": [
         {
-          "d": "2026-06-07",
-          "state": "none"
-        },
-        {
           "d": "2026-06-08",
           "state": "none"
         },
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-09-04",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-05",
           "state": "up"
         }
       ]
@@ -397,10 +397,6 @@
       "responseLabel": "269 ms",
       "daily": [
         {
-          "d": "2026-06-07",
-          "state": "none"
-        },
-        {
           "d": "2026-06-08",
           "state": "none"
         },
@@ -755,6 +751,10 @@
         {
           "d": "2026-09-04",
           "state": "up"
+        },
+        {
+          "d": "2026-09-05",
+          "state": "up"
         }
       ]
     },
@@ -769,10 +769,6 @@
       "responseMs": 238,
       "responseLabel": "247 ms",
       "daily": [
-        {
-          "d": "2026-06-07",
-          "state": "none"
-        },
         {
           "d": "2026-06-08",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-09-04",
           "state": "up"
+        },
+        {
+          "d": "2026-09-05",
+          "state": "up"
         }
       ]
     },
@@ -1140,12 +1140,8 @@
       "lastCheck": "2026-09-04T23:13:33.100Z",
       "uptime": "100%",
       "responseMs": 456,
-      "responseLabel": "389 ms",
+      "responseLabel": "391 ms",
       "daily": [
-        {
-          "d": "2026-06-07",
-          "state": "none"
-        },
         {
           "d": "2026-06-08",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-09-04",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-05",
           "state": "up"
         }
       ]
