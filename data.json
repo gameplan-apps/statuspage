@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-05T23:56:55.924Z",
+  "generatedAt": "2026-09-06T00:59:19.159Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -21,12 +21,8 @@
       "lastCheck": "2026-09-05T23:12:38.996Z",
       "uptime": "100%",
       "responseMs": 218,
-      "responseLabel": "178 ms",
+      "responseLabel": "179 ms",
       "daily": [
-        {
-          "d": "2026-06-08",
-          "state": "none"
-        },
         {
           "d": "2026-06-09",
           "state": "none"
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-09-05",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-06",
           "state": "up"
         }
       ]
@@ -394,12 +394,8 @@
       "lastCheck": "2026-09-05T23:12:39.327Z",
       "uptime": "100%",
       "responseMs": 303,
-      "responseLabel": "269 ms",
+      "responseLabel": "270 ms",
       "daily": [
-        {
-          "d": "2026-06-08",
-          "state": "none"
-        },
         {
           "d": "2026-06-09",
           "state": "none"
@@ -755,6 +751,10 @@
         {
           "d": "2026-09-05",
           "state": "up"
+        },
+        {
+          "d": "2026-09-06",
+          "state": "up"
         }
       ]
     },
@@ -767,12 +767,8 @@
       "lastCheck": "2026-09-05T23:12:39.558Z",
       "uptime": "100%",
       "responseMs": 208,
-      "responseLabel": "247 ms",
+      "responseLabel": "246 ms",
       "daily": [
-        {
-          "d": "2026-06-08",
-          "state": "none"
-        },
         {
           "d": "2026-06-09",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-09-05",
           "state": "up"
+        },
+        {
+          "d": "2026-09-06",
+          "state": "up"
         }
       ]
     },
@@ -1140,12 +1140,8 @@
       "lastCheck": "2026-09-05T23:12:40.073Z",
       "uptime": "100%",
       "responseMs": 490,
-      "responseLabel": "391 ms",
+      "responseLabel": "394 ms",
       "daily": [
-        {
-          "d": "2026-06-08",
-          "state": "none"
-        },
         {
           "d": "2026-06-09",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-09-05",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-06",
           "state": "up"
         }
       ]
