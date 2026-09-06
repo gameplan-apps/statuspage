@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-06T14:55:43.777Z",
+  "generatedAt": "2026-09-06T15:14:08.789Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -7,8 +7,8 @@
     "servicesMonitored": 4,
     "uptime7": "100.00%",
     "medianMs": 261,
-    "incidents30d": 1,
-    "mttrMin": 24,
+    "incidents30d": 0,
+    "mttrMin": null,
     "lastCheck": "2026-09-05T23:12:40.073Z"
   },
   "services": [
