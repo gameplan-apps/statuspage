@@ -22,19 +22,19 @@
     "url": "https://monolith.svcrabbit.com/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/monolith.svcrabbit.com.ico",
     "slug": "monolith-api",
-    "status": "degraded",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 977,
-    "timeDay": 16290,
-    "timeWeek": 4250,
-    "timeMonth": 1258,
-    "timeYear": 977,
+    "status": "up",
+    "uptime": "99.96%",
+    "uptimeDay": "98.55%",
+    "uptimeWeek": "99.79%",
+    "uptimeMonth": "99.95%",
+    "uptimeYear": "99.96%",
+    "time": 962,
+    "timeDay": 10955,
+    "timeWeek": 3810,
+    "timeMonth": 1228,
+    "timeYear": 962,
     "dailyMinutesDown": {
-      "2026-09-13": 0
+      "2026-09-13": 21
     }
   },
   {
