@@ -22,18 +22,20 @@
     "url": "https://monolith.svcrabbit.com/readyz",
     "icon": "https://icons.duckduckgo.com/ip3/monolith.svcrabbit.com.ico",
     "slug": "monolith-api",
-    "status": "up",
+    "status": "degraded",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 263,
-    "timeDay": 172,
-    "timeWeek": 228,
-    "timeMonth": 253,
-    "timeYear": 263,
-    "dailyMinutesDown": {}
+    "time": 977,
+    "timeDay": 16290,
+    "timeWeek": 4250,
+    "timeMonth": 1258,
+    "timeYear": 977,
+    "dailyMinutesDown": {
+      "2026-09-13": 0
+    }
   },
   {
     "name": "Studio dashboard",
