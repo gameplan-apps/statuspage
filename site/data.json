@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-13T23:54:40.135Z",
+  "generatedAt": "2026-09-14T00:35:59.336Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "100.00%",
+    "uptime7": "99.95%",
     "medianMs": 309,
     "incidents30d": 1,
     "mttrMin": 21,
@@ -21,12 +21,8 @@
       "lastCheck": "2026-09-13T23:13:28.843Z",
       "uptime": "100%",
       "responseMs": 222,
-      "responseLabel": "177 ms",
+      "responseLabel": "178 ms",
       "daily": [
-        {
-          "d": "2026-06-16",
-          "state": "none"
-        },
         {
           "d": "2026-06-17",
           "state": "none"
@@ -382,6 +378,10 @@
         {
           "d": "2026-09-13",
           "state": "up"
+        },
+        {
+          "d": "2026-09-14",
+          "state": "up"
         }
       ]
     },
@@ -392,14 +392,10 @@
       "host": "monolith.svcrabbit.com/readyz",
       "state": "up",
       "lastCheck": "2026-09-13T23:13:29.092Z",
-      "uptime": "100%",
+      "uptime": "99.79%",
       "responseMs": 227,
-      "responseLabel": "263 ms",
+      "responseLabel": "947 ms",
       "daily": [
-        {
-          "d": "2026-06-16",
-          "state": "none"
-        },
         {
           "d": "2026-06-17",
           "state": "none"
@@ -755,6 +751,10 @@
         {
           "d": "2026-09-13",
           "state": "degraded"
+        },
+        {
+          "d": "2026-09-14",
+          "state": "up"
         }
       ]
     },
@@ -767,12 +767,8 @@
       "lastCheck": "2026-09-13T23:13:29.610Z",
       "uptime": "100%",
       "responseMs": 501,
-      "responseLabel": "237 ms",
+      "responseLabel": "243 ms",
       "daily": [
-        {
-          "d": "2026-06-16",
-          "state": "none"
-        },
         {
           "d": "2026-06-17",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-09-13",
           "state": "up"
+        },
+        {
+          "d": "2026-09-14",
+          "state": "up"
         }
       ]
     },
@@ -1142,10 +1142,6 @@
       "responseMs": 390,
       "responseLabel": "374 ms",
       "daily": [
-        {
-          "d": "2026-06-16",
-          "state": "none"
-        },
         {
           "d": "2026-06-17",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-09-13",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-14",
           "state": "up"
         }
       ]
