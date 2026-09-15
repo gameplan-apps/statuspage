@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 178,
-    "timeDay": 222,
-    "timeWeek": 189,
-    "timeMonth": 155,
-    "timeYear": 178,
+    "time": 201,
+    "timeDay": 1272,
+    "timeWeek": 362,
+    "timeMonth": 192,
+    "timeYear": 201,
     "dailyMinutesDown": {}
   },
   {
@@ -23,16 +23,16 @@
     "icon": "https://icons.duckduckgo.com/ip3/monolith.svcrabbit.com.ico",
     "slug": "monolith-api",
     "status": "up",
-    "uptime": "99.96%",
-    "uptimeDay": "98.55%",
+    "uptime": "99.97%",
+    "uptimeDay": "100.00%",
     "uptimeWeek": "99.79%",
     "uptimeMonth": "99.95%",
-    "uptimeYear": "99.96%",
-    "time": 947,
-    "timeDay": 10973,
-    "timeWeek": 3821,
-    "timeMonth": 1223,
-    "timeYear": 947,
+    "uptimeYear": "99.97%",
+    "time": 929,
+    "timeDay": 103,
+    "timeWeek": 3818,
+    "timeMonth": 1201,
+    "timeYear": 929,
     "dailyMinutesDown": {
       "2026-09-13": 21
     }
@@ -48,11 +48,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.91%",
-    "time": 243,
-    "timeDay": 501,
-    "timeWeek": 243,
-    "timeMonth": 254,
-    "timeYear": 243,
+    "time": 241,
+    "timeDay": 174,
+    "timeWeek": 248,
+    "timeMonth": 251,
+    "timeYear": 241,
     "dailyMinutesDown": {
       "2026-08-07": 53
     }
@@ -68,11 +68,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.96%",
-    "time": 374,
-    "timeDay": 390,
-    "timeWeek": 296,
-    "timeMonth": 241,
-    "timeYear": 374,
+    "time": 370,
+    "timeDay": 185,
+    "timeWeek": 295,
+    "timeMonth": 243,
+    "timeYear": 370,
     "dailyMinutesDown": {
       "2026-08-07": 24
     }
