@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-09-16T20:52:40.160Z",
+  "generatedAt": "2026-09-16T21:01:25.224Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "degraded",
-    "headline": "1 service degraded",
+    "overall": "up",
+    "headline": "All systems operational",
     "servicesMonitored": 4,
     "uptime7": "99.95%",
     "medianMs": 151,
     "incidents30d": 2,
-    "mttrMin": 21,
-    "lastCheck": "2026-09-16T20:52:14.378Z"
+    "mttrMin": 15,
+    "lastCheck": "2026-09-16T21:00:57.203Z"
   },
   "services": [
     {
@@ -390,10 +390,10 @@
       "name": "Monolith API",
       "url": "https://monolith.svcrabbit.com/readyz",
       "host": "monolith.svcrabbit.com/readyz",
-      "state": "degraded",
-      "lastCheck": "2026-09-16T20:52:14.378Z",
+      "state": "up",
+      "lastCheck": "2026-09-16T21:00:57.203Z",
       "uptime": "99.79%",
-      "responseMs": 1805,
+      "responseMs": 664,
       "responseLabel": "912 ms",
       "daily": [
         {
@@ -1511,10 +1511,10 @@
       "title": "Monolith API has degraded performance",
       "body": "The service responded more slowly than its configured threshold.",
       "kind": "degraded",
-      "resolved": false,
+      "resolved": true,
       "startedAt": "2026-09-16T20:52:14Z",
-      "endedAt": null,
-      "durationMin": null,
+      "endedAt": "2026-09-16T21:00:58Z",
+      "durationMin": 9,
       "url": "https://github.com/gameplan-apps/statuspage/issues/5",
       "services": []
     },
