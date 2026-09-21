@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-20T23:56:31.583Z",
+  "generatedAt": "2026-09-21T00:57:40.824Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "99.93%",
+    "uptime7": "99.98%",
     "medianMs": 199,
     "incidents30d": 2,
     "mttrMin": 15,
@@ -21,12 +21,8 @@
       "lastCheck": "2026-09-20T23:13:53.000Z",
       "uptime": "100%",
       "responseMs": 209,
-      "responseLabel": "240 ms",
+      "responseLabel": "239 ms",
       "daily": [
-        {
-          "d": "2026-06-23",
-          "state": "none"
-        },
         {
           "d": "2026-06-24",
           "state": "none"
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-09-20",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-21",
           "state": "up"
         }
       ]
@@ -392,14 +392,10 @@
       "host": "monolith.svcrabbit.com/readyz",
       "state": "up",
       "lastCheck": "2026-09-20T23:13:53.521Z",
-      "uptime": "99.71%",
+      "uptime": "99.91%",
       "responseMs": 317,
-      "responseLabel": "876 ms",
+      "responseLabel": "866 ms",
       "daily": [
-        {
-          "d": "2026-06-23",
-          "state": "none"
-        },
         {
           "d": "2026-06-24",
           "state": "none"
@@ -754,6 +750,10 @@
         },
         {
           "d": "2026-09-20",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-21",
           "state": "up"
         }
       ]
@@ -767,12 +767,8 @@
       "lastCheck": "2026-09-20T23:13:53.707Z",
       "uptime": "100%",
       "responseMs": 168,
-      "responseLabel": "233 ms",
+      "responseLabel": "232 ms",
       "daily": [
-        {
-          "d": "2026-06-23",
-          "state": "none"
-        },
         {
           "d": "2026-06-24",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-09-20",
           "state": "up"
+        },
+        {
+          "d": "2026-09-21",
+          "state": "up"
         }
       ]
     },
@@ -1140,12 +1140,8 @@
       "lastCheck": "2026-09-20T23:13:53.913Z",
       "uptime": "100%",
       "responseMs": 188,
-      "responseLabel": "356 ms",
+      "responseLabel": "353 ms",
       "daily": [
-        {
-          "d": "2026-06-23",
-          "state": "none"
-        },
         {
           "d": "2026-06-24",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-09-20",
+          "state": "up"
+        },
+        {
+          "d": "2026-09-21",
           "state": "up"
         }
       ]
