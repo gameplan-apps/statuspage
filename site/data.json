@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-06T23:13:41.688Z",
+  "generatedAt": "2026-10-06T23:29:59.988Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
     "uptime7": "99.80%",
-    "medianMs": 379,
+    "medianMs": 327,
     "incidents30d": 8,
     "mttrMin": 19,
-    "lastCheck": "2026-10-06T01:36:16.015Z"
+    "lastCheck": "2026-10-06T23:15:55.475Z"
   },
   "services": [
     {
@@ -18,9 +18,9 @@
       "url": "https://gateway.svcrabbit.com/healthz",
       "host": "gateway.svcrabbit.com/healthz",
       "state": "up",
-      "lastCheck": "2026-10-05T23:15:37.555Z",
+      "lastCheck": "2026-10-06T23:15:54.204Z",
       "uptime": "100%",
-      "responseMs": 475,
+      "responseMs": 186,
       "responseLabel": "241 ms",
       "daily": [
         {
@@ -391,9 +391,9 @@
       "url": "https://monolith.svcrabbit.com/readyz",
       "host": "monolith.svcrabbit.com/readyz",
       "state": "up",
-      "lastCheck": "2026-10-06T01:36:16.015Z",
+      "lastCheck": "2026-10-06T23:15:54.517Z",
       "uptime": "99.2%",
-      "responseMs": 282,
+      "responseMs": 289,
       "responseLabel": "815 ms",
       "daily": [
         {
@@ -764,9 +764,9 @@
       "url": "https://studio.apprabbit.app/",
       "host": "studio.apprabbit.app",
       "state": "up",
-      "lastCheck": "2026-10-05T23:15:38.762Z",
+      "lastCheck": "2026-10-06T23:15:54.900Z",
       "uptime": "100%",
-      "responseMs": 187,
+      "responseMs": 364,
       "responseLabel": "221 ms",
       "daily": [
         {
@@ -1137,9 +1137,9 @@
       "url": "https://apprabbit.com",
       "host": "apprabbit.com",
       "state": "up",
-      "lastCheck": "2026-10-05T23:15:39.263Z",
+      "lastCheck": "2026-10-06T23:15:55.475Z",
       "uptime": "100%",
-      "responseMs": 479,
+      "responseMs": 521,
       "responseLabel": "343 ms",
       "daily": [
         {
