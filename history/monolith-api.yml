@@ -1,7 +1,7 @@
 url: https://monolith.svcrabbit.com/readyz
-status: up
+status: degraded
 code: 200
-responseTime: 478
-lastUpdated: 2026-10-11T10:20:35.653Z
+responseTime: 1707
+lastUpdated: 2026-10-11T11:17:29.702Z
 startTime: 2026-08-03T16:18:17.354Z
 generator: Upptime <https://github.com/upptime/upptime>
