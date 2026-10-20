@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-20T00:07:26.179Z",
+  "generatedAt": "2026-10-20T00:54:37.873Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "99.81%",
+    "uptime7": "100.00%",
     "medianMs": 248,
     "incidents30d": 12,
     "mttrMin": 21,
@@ -392,9 +392,9 @@
       "host": "monolith.svcrabbit.com/readyz",
       "state": "up",
       "lastCheck": "2026-10-19T23:15:13.484Z",
-      "uptime": "99.26%",
+      "uptime": "100%",
       "responseMs": 240,
-      "responseLabel": "770 ms",
+      "responseLabel": "765 ms",
       "daily": [
         {
           "d": "2026-07-23",
