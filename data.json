@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-22T23:32:33.294Z",
+  "generatedAt": "2026-10-22T23:41:46.476Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "degraded",
-    "headline": "1 service degraded",
+    "overall": "up",
+    "headline": "All systems operational",
     "servicesMonitored": 4,
     "uptime7": "100.00%",
     "medianMs": 156,
     "incidents30d": 13,
-    "mttrMin": 21,
-    "lastCheck": "2026-10-22T23:32:01.404Z"
+    "mttrMin": 20,
+    "lastCheck": "2026-10-22T23:41:20.424Z"
   },
   "services": [
     {
@@ -763,10 +763,10 @@
       "name": "Studio dashboard",
       "url": "https://studio.apprabbit.app/",
       "host": "studio.apprabbit.app",
-      "state": "degraded",
-      "lastCheck": "2026-10-22T23:32:01.404Z",
+      "state": "up",
+      "lastCheck": "2026-10-22T23:41:20.424Z",
       "uptime": "100%",
-      "responseMs": 6010,
+      "responseMs": 375,
       "responseLabel": "223 ms",
       "daily": [
         {
@@ -1511,10 +1511,10 @@
       "title": "Studio dashboard has degraded performance",
       "body": "The service responded more slowly than its configured threshold.",
       "kind": "degraded",
-      "resolved": false,
+      "resolved": true,
       "startedAt": "2026-10-22T23:32:01Z",
-      "endedAt": null,
-      "durationMin": null,
+      "endedAt": "2026-10-22T23:41:22Z",
+      "durationMin": 9,
       "url": "https://github.com/gameplan-apps/statuspage/issues/18",
       "services": []
     },
