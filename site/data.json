@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-10-22T23:19:18.408Z",
+  "generatedAt": "2026-10-22T23:32:33.294Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "up",
-    "headline": "All systems operational",
+    "overall": "degraded",
+    "headline": "1 service degraded",
     "servicesMonitored": 4,
     "uptime7": "100.00%",
-    "medianMs": 149,
-    "incidents30d": 12,
+    "medianMs": 156,
+    "incidents30d": 13,
     "mttrMin": 21,
-    "lastCheck": "2026-10-22T23:14:34.437Z"
+    "lastCheck": "2026-10-22T23:32:01.404Z"
   },
   "services": [
     {
@@ -763,10 +763,10 @@
       "name": "Studio dashboard",
       "url": "https://studio.apprabbit.app/",
       "host": "studio.apprabbit.app",
-      "state": "up",
-      "lastCheck": "2026-10-22T23:14:34.258Z",
+      "state": "degraded",
+      "lastCheck": "2026-10-22T23:32:01.404Z",
       "uptime": "100%",
-      "responseMs": 148,
+      "responseMs": 6010,
       "responseLabel": "223 ms",
       "daily": [
         {
@@ -1127,7 +1127,7 @@
         },
         {
           "d": "2026-10-22",
-          "state": "up"
+          "state": "degraded"
         }
       ]
     },
@@ -1506,6 +1506,18 @@
     }
   ],
   "incidents": [
+    {
+      "number": 18,
+      "title": "Studio dashboard has degraded performance",
+      "body": "The service responded more slowly than its configured threshold.",
+      "kind": "degraded",
+      "resolved": false,
+      "startedAt": "2026-10-22T23:32:01Z",
+      "endedAt": null,
+      "durationMin": null,
+      "url": "https://github.com/gameplan-apps/statuspage/issues/18",
+      "services": []
+    },
     {
       "number": 17,
       "title": "Monolith API has degraded performance",
