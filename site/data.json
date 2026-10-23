@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-10-22T23:59:26.145Z",
+  "generatedAt": "2026-10-23T00:52:39.835Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
     "headline": "All systems operational",
     "servicesMonitored": 4,
-    "uptime7": "100.00%",
+    "uptime7": "99.98%",
     "medianMs": 156,
     "incidents30d": 13,
     "mttrMin": 20,
@@ -21,12 +21,8 @@
       "lastCheck": "2026-10-22T23:14:33.896Z",
       "uptime": "100%",
       "responseMs": 58,
-      "responseLabel": "226 ms",
+      "responseLabel": "224 ms",
       "daily": [
-        {
-          "d": "2026-07-25",
-          "state": "none"
-        },
         {
           "d": "2026-07-26",
           "state": "none"
@@ -381,6 +377,10 @@
         },
         {
           "d": "2026-10-22",
+          "state": "up"
+        },
+        {
+          "d": "2026-10-23",
           "state": "up"
         }
       ]
@@ -394,12 +394,8 @@
       "lastCheck": "2026-10-22T23:14:34.087Z",
       "uptime": "100%",
       "responseMs": 163,
-      "responseLabel": "755 ms",
+      "responseLabel": "749 ms",
       "daily": [
-        {
-          "d": "2026-07-25",
-          "state": "none"
-        },
         {
           "d": "2026-07-26",
           "state": "none"
@@ -755,6 +751,10 @@
         {
           "d": "2026-10-22",
           "state": "up"
+        },
+        {
+          "d": "2026-10-23",
+          "state": "up"
         }
       ]
     },
@@ -765,14 +765,10 @@
       "host": "studio.apprabbit.app",
       "state": "up",
       "lastCheck": "2026-10-22T23:41:20.424Z",
-      "uptime": "100%",
+      "uptime": "99.91%",
       "responseMs": 375,
-      "responseLabel": "223 ms",
+      "responseLabel": "290 ms",
       "daily": [
-        {
-          "d": "2026-07-25",
-          "state": "none"
-        },
         {
           "d": "2026-07-26",
           "state": "none"
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-10-22",
           "state": "degraded"
+        },
+        {
+          "d": "2026-10-23",
+          "state": "up"
         }
       ]
     },
@@ -1140,12 +1140,8 @@
       "lastCheck": "2026-10-22T23:14:34.437Z",
       "uptime": "100%",
       "responseMs": 149,
-      "responseLabel": "336 ms",
+      "responseLabel": "334 ms",
       "daily": [
-        {
-          "d": "2026-07-25",
-          "state": "none"
-        },
         {
           "d": "2026-07-26",
           "state": "none"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-10-22",
+          "state": "up"
+        },
+        {
+          "d": "2026-10-23",
           "state": "up"
         }
       ]
