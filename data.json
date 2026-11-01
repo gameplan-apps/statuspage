@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-11-01T08:53:06.641Z",
+  "generatedAt": "2026-11-01T09:05:42.000Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
-    "overall": "up",
-    "headline": "All systems operational",
+    "overall": "down",
+    "headline": "1 service down",
     "servicesMonitored": 4,
     "uptime7": "100.00%",
-    "medianMs": 186,
-    "incidents30d": 11,
+    "medianMs": 192,
+    "incidents30d": 12,
     "mttrMin": 20,
-    "lastCheck": "2026-10-31T23:08:28.012Z"
+    "lastCheck": "2026-11-01T09:04:44.884Z"
   },
   "services": [
     {
@@ -17,10 +17,10 @@
       "name": "API gateway",
       "url": "https://gateway.svcrabbit.com/healthz",
       "host": "gateway.svcrabbit.com/healthz",
-      "state": "up",
-      "lastCheck": "2026-10-31T23:08:26.967Z",
+      "state": "down",
+      "lastCheck": "2026-11-01T09:04:44.884Z",
       "uptime": "100%",
-      "responseMs": 144,
+      "responseMs": 0,
       "responseLabel": "216 ms",
       "daily": [
         {
@@ -381,7 +381,7 @@
         },
         {
           "d": "2026-11-01",
-          "state": "up"
+          "state": "down"
         }
       ]
     },
@@ -1506,6 +1506,20 @@
     }
   ],
   "incidents": [
+    {
+      "number": 19,
+      "title": "API gateway is down",
+      "body": "API gateway failed its health check from GitHub's probes.",
+      "kind": "down",
+      "resolved": false,
+      "startedAt": "2026-11-01T09:04:45Z",
+      "endedAt": null,
+      "durationMin": null,
+      "url": "https://github.com/gameplan-apps/statuspage/issues/19",
+      "services": [
+        "API gateway"
+      ]
+    },
     {
       "number": 18,
       "title": "Studio dashboard has degraded performance",
