@@ -4,19 +4,19 @@
     "url": "https://gateway.svcrabbit.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/gateway.svcrabbit.com.ico",
     "slug": "api-gateway",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.96%",
-    "uptimeWeek": "99.99%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
+    "status": "up",
+    "uptime": "99.99%",
+    "uptimeDay": "99.27%",
+    "uptimeWeek": "99.90%",
+    "uptimeMonth": "99.98%",
+    "uptimeYear": "99.99%",
     "time": 216,
-    "timeDay": 144,
-    "timeWeek": 137,
+    "timeDay": 156,
+    "timeWeek": 141,
     "timeMonth": 157,
     "timeYear": 216,
     "dailyMinutesDown": {
-      "2026-11-01": 1
+      "2026-11-01": 11
     }
   },
   {
