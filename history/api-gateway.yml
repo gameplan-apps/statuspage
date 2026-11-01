@@ -1,7 +1,7 @@
 url: https://gateway.svcrabbit.com/healthz
-status: down
-code: 0
-responseTime: 0
-lastUpdated: 2026-11-01T09:04:44.884Z
+status: up
+code: 200
+responseTime: 168
+lastUpdated: 2026-11-01T09:15:18.309Z
 startTime: 2026-08-03T17:25:33.844Z
 generator: Upptime <https://github.com/upptime/upptime>
