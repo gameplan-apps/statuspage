@@ -4,10 +4,10 @@
     "url": "https://gateway.svcrabbit.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/gateway.svcrabbit.com.ico",
     "slug": "api-gateway",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
+    "uptimeDay": "99.96%",
+    "uptimeWeek": "99.99%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 216,
@@ -15,7 +15,9 @@
     "timeWeek": 137,
     "timeMonth": 157,
     "timeYear": 216,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-11-01": 1
+    }
   },
   {
     "name": "Monolith API",
