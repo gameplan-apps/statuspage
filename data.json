@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-15T23:53:53.690Z",
+  "generatedAt": "2026-11-16T00:18:09.858Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -21,12 +21,8 @@
       "lastCheck": "2026-11-15T23:09:39.969Z",
       "uptime": "100%",
       "responseMs": 127,
-      "responseLabel": "207 ms",
+      "responseLabel": "206 ms",
       "daily": [
-        {
-          "d": "2026-08-18",
-          "state": "up"
-        },
         {
           "d": "2026-08-19",
           "state": "up"
@@ -382,6 +378,10 @@
         {
           "d": "2026-11-15",
           "state": "up"
+        },
+        {
+          "d": "2026-11-16",
+          "state": "up"
         }
       ]
     },
@@ -394,12 +394,8 @@
       "lastCheck": "2026-11-15T23:09:40.243Z",
       "uptime": "100%",
       "responseMs": 244,
-      "responseLabel": "663 ms",
+      "responseLabel": "660 ms",
       "daily": [
-        {
-          "d": "2026-08-18",
-          "state": "up"
-        },
         {
           "d": "2026-08-19",
           "state": "up"
@@ -754,6 +750,10 @@
         },
         {
           "d": "2026-11-15",
+          "state": "up"
+        },
+        {
+          "d": "2026-11-16",
           "state": "up"
         }
       ]
@@ -770,10 +770,6 @@
       "responseLabel": "277 ms",
       "daily": [
         {
-          "d": "2026-08-18",
-          "state": "up"
-        },
-        {
           "d": "2026-08-19",
           "state": "up"
         },
@@ -1128,6 +1124,10 @@
         {
           "d": "2026-11-15",
           "state": "up"
+        },
+        {
+          "d": "2026-11-16",
+          "state": "up"
         }
       ]
     },
@@ -1142,10 +1142,6 @@
       "responseMs": 318,
       "responseLabel": "328 ms",
       "daily": [
-        {
-          "d": "2026-08-18",
-          "state": "up"
-        },
         {
           "d": "2026-08-19",
           "state": "up"
@@ -1500,6 +1496,10 @@
         },
         {
           "d": "2026-11-15",
+          "state": "up"
+        },
+        {
+          "d": "2026-11-16",
           "state": "up"
         }
       ]
