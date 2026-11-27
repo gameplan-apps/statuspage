@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T00:02:13.476Z",
+  "generatedAt": "2026-11-27T00:35:10.433Z",
   "repo": "gameplan-apps/statuspage",
   "summary": {
     "overall": "up",
@@ -394,7 +394,7 @@
       "lastCheck": "2026-11-26T23:09:36.331Z",
       "uptime": "100%",
       "responseMs": 278,
-      "responseLabel": "627 ms",
+      "responseLabel": "624 ms",
       "daily": [
         {
           "d": "2026-08-30",
@@ -767,7 +767,7 @@
       "lastCheck": "2026-11-26T23:09:36.545Z",
       "uptime": "100%",
       "responseMs": 185,
-      "responseLabel": "268 ms",
+      "responseLabel": "267 ms",
       "daily": [
         {
           "d": "2026-08-30",
@@ -1140,7 +1140,7 @@
       "lastCheck": "2026-11-26T23:09:36.756Z",
       "uptime": "100%",
       "responseMs": 181,
-      "responseLabel": "318 ms",
+      "responseLabel": "317 ms",
       "daily": [
         {
           "d": "2026-08-30",
